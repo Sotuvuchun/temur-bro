@@ -24,8 +24,8 @@ load_dotenv()
 keep_alive()
 
 API_TOKEN = os.getenv("API_TOKEN")
-CHANNELS = ["@AniVerseClip", "@AniVerseUzDub"]
-MAIN_CHANNELS = ["@anilord_ongoing", "@hoshino_dubbing", "@AniVerseClip"]
+CHANNELS = []
+MAIN_CHANNELS = []
 BOT_USERNAME = os.getenv("BOT_USERNAME")
 
 bot = Bot(token=API_TOKEN)
