@@ -42,7 +42,7 @@ bot = Bot(token=API_TOKEN)
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
 
-ADMINS = {6486825926, 7137566109}
+ADMINS = {6486825926, 6549594161}
 
 # === KEYBOARDS ===
 def admin_keyboard():
@@ -144,7 +144,7 @@ async def start_handler(message: types.Message):
 
         unsubscribed = await get_unsubscribed_channels(message.from_user.id)
         if unsubscribed:
-            markup = await make_full_subscribe_markup(code)
+            markup = await get_unsubscribed_channels(code)
             await message.answer(
                 "❗ Animeni olishdan oldin quyidagi homiy kanal(lar)ga obuna bo‘ling:",
                 reply_markup=markup
