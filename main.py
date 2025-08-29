@@ -16,9 +16,6 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMar
 from aiogram.utils import executor
 from aiogram.utils.exceptions import RetryAfter, BotBlocked, ChatNotFound
 from aiogram.utils.markdown import escape_md
-
-# === 📂 Loyihaga tegishli modullar ===
-from konkurs import register_konkurs_handlers
 from keep_alive import keep_alive
 from database import init_db, add_user, get_user_count, add_kino_code, get_kino_by_code, get_all_codes, delete_kino_code, get_code_stat, increment_stat, get_all_user_ids, update_anime_code, get_today_users
 
@@ -1012,7 +1009,6 @@ async def control_action(message: types.Message, state: FSMContext):
 # === on_startup va run ===
 async def on_startup(dp):
     await init_db()
-    register_konkurs_handlers(dp, bot, ADMINS)
     print("✅ PostgreSQL bazaga ulandi!")
 
 if __name__ == "__main__":
