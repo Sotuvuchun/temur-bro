@@ -42,7 +42,7 @@ bot = Bot(token=API_TOKEN)
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
 
-ADMINS = {6486825926, 8452935714}
+ADMINS = {6486825926, 6593431872}
 
 # === KEYBOARDS ===
 def admin_keyboard():
